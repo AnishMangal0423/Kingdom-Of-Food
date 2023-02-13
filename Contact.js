@@ -4,7 +4,7 @@ import React from "react";
 // import { useState } from "react";
 
 
-function Contact({cloudinaryImageId,name,lastMileTravelString,area}) {
+function Contact({cloudinaryImageId,name,lastMileTravelString,area,costForTwo}) {
 
   /**
    * U know we guys can also destructure the objects as prop and can use simple words ,, rather then these long-long definations
@@ -45,6 +45,7 @@ let[love,setlove]=React.useState(heart1);
         />   */}
 
         <span> {lastMileTravelString} </span>
+        <span>{costForTwo/100}</span>
 
 
         <div className="">

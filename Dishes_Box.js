@@ -67,7 +67,7 @@ function Dishes_box({ name, cloudinaryImageId, price, description,fav,fn,key}) {
       </div>
                 
 <div className="-ml-[420px]">
-        <button onClick={}><img src={fav} className="h-3 w-3 -mb-10"/></button>
+        {/* <button onClick={}><img src={fav} className="h-3 w-3 -mb-10"/></button> */}
         </div>
         </div>
     </div>

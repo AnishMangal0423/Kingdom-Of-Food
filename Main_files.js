@@ -99,6 +99,26 @@ function Main_files() {
    }
  
 
+
+      function relevance_res(){
+console.log("ani")
+           setfilterobj(newData);
+           
+      }
+
+
+     function lowTohigh(){
+          console.log("hii")
+        setfilterobj(filterobj.sort((obj1,obj2)=>(obj1?.data?.
+         costForTwo)/100 - (obj2?.data?.costForTwo)/100))
+     }
+
+
+
+
+
+
+
   return newData.length == 0 ? (
     <Shimar />
   ) : (
@@ -132,9 +152,17 @@ function Main_files() {
       </div>
 
 
+
+   <div className="flex -mb-4 border-b-2 border-gray-200 ">
     <h1 className="text-xl ml-16 -mb-6 font-bold">{filterobj.length} Restaurants</h1>
-
-
+<ul className="flex ml-56 mt-1 text-gray-700 ">
+    <button onClick={relevance_res}><li className="ml-4 mb-3 ">Relevance</li></button>
+    <li className="ml-4">Delevery Time</li>
+    <li className="ml-4">Rating</li>
+    <button onClick={lowTohigh}><li className="ml-4">Cost: Low to High</li></button>
+   <li className="ml-4">Cost: High to low</li>
+</ul>
+</div>
 
       <div className="contacts flex flex-wrap gap-10 ml-16 mt-10">
 
