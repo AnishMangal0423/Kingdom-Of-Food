@@ -20,7 +20,7 @@ function Menu_Body(){
     // console.log(resId)
 
 
-    let[love,setlove]=useState(heart1)
+    let[love,setlove]=useState();
 
     useEffect(()=>{
 
