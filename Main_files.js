@@ -152,7 +152,7 @@ console.log("ani")
       </div>
 
 
-
+<div className="flex flex-col ml-16  ">
    <div className="flex -mb-4 border-b-2 border-gray-200 ">
     <h1 className="text-xl ml-16 -mb-6 font-bold">{filterobj.length} Restaurants</h1>
 <ul className="flex ml-56 mt-1 text-gray-700 ">
@@ -164,7 +164,7 @@ console.log("ani")
 </ul>
 </div>
 
-      <div className="contacts flex flex-wrap gap-10 ml-16 mt-10">
+      <div className="contacts flex flex-wrap gap-10 mt-10">
 
         {filterobj.length == 0 && newData.length > 0 ? (<No_Restaurant />) : filterobj.map((Contacts, index) => {
 
@@ -175,7 +175,7 @@ console.log("ani")
 
 
       </div>
-
+</div>
 
      
     </div>
