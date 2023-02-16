@@ -8,9 +8,13 @@ import user from "./Images/user-2.png";
 import king from "./Images/king.jpg"
 // import Main_files from "./Main_files.js";
 // import user from "./Images/user.png";
+import Person from "./Usercontext.js";
+import { useContext } from "react"
+
 function Navbar() {
 
   let[log,setlog]=useState("Login")
+  let {user1}=useContext(Person);
 
   function changelogin(){
 
@@ -46,9 +50,14 @@ function Navbar() {
     <li ><a href="/">Home</a></li>
    <Link to="/about" className="ml-5"><li>About</li></Link>
    <Link to="/ContactUs" className="ml-5"><li> Contact Us</li></Link>
-   <li className="ml-40" ><button onClick={changelogin}>{log}</button></li>
 
-   <li className="ml-4 "><img src={user} className="h-6 w-6"></img></li>
+   
+   <li className="ml-20" ><button onClick={changelogin}>{log}</button></li>
+            
+      
+   <li className="ml-1 "><img src={user} className="h-6 w-6"></img></li>
+   
+   <li className="ml-2 font-mono">Welcome {(user1?.name)}</li>
    
    </ul>
 

@@ -1,6 +1,8 @@
 // import phone from "./Images/telephone.png";
 import heart1 from "./Images/Heart-2.png"
 import React from "react";
+import Person from "./Usercontext.js";
+import { useContext } from "react";
 // import { useState } from "react";
 
 
@@ -11,7 +13,7 @@ function Contact({cloudinaryImageId,name,lastMileTravelString,area,costForTwo}) 
    * **/
 
 let[love,setlove]=React.useState(heart1);
-
+let {user1}=useContext(Person);
 
 
   return (
@@ -50,6 +52,7 @@ let[love,setlove]=React.useState(heart1);
 
         <div className="">
         <button><img src={love} className="h-3 w-3"/></button>
+        <h4>{user1?.name}</h4>
         </div>
       </div>
 

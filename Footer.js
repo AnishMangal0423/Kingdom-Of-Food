@@ -1,8 +1,14 @@
+
+
 function Footer(){
 
-    return(
+//    let{user1}=useContext(Person);
 
+    return(
+<>
         <h3>Hii I am a footer</h3>
+      
+        </>
     )
 }
 

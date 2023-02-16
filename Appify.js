@@ -10,14 +10,38 @@ import Footer from "./Footer.js";
 import Error from "./Error.js"
 import Menu from "./Restaurant_menu_Header";
 import Menu_Body from "./Restaurant_menu_Body.js";
+import Person from "./Usercontext.js";
+import { useState } from "react";
 
 function Appify(){
 
+
+  let[candidate,setcandidate]=useState({
+
+    name:"Ani 💚",
+    Email:"anishm0423@gmail.com",
+  })
+
      return(
         <>
+        
+
+<Person.Provider
+
+     value={{
+
+         user1:candidate,
+        //  setcandidate:""
+
+     }}
+>
      <Navbar />
+     
      <Outlet />
      <Footer />
+     </Person.Provider>
+
+   
 </>
      )
 }
