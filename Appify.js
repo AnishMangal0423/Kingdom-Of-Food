@@ -12,6 +12,9 @@ import Menu from "./Restaurant_menu_Header";
 import Menu_Body from "./Restaurant_menu_Body.js";
 import Person from "./Usercontext.js";
 import { useState } from "react";
+import { Provider } from "react-redux";
+import Store from "./Store.js";
+import Cart from "./Cart.js";
 
 function Appify(){
 
@@ -25,7 +28,7 @@ function Appify(){
      return(
         <>
         
-
+<Provider store={Store}>
 <Person.Provider
 
      value={{
@@ -40,7 +43,7 @@ function Appify(){
      <Outlet />
      <Footer />
      </Person.Provider>
-
+</Provider>
    
 </>
      )
@@ -76,6 +79,12 @@ let routes= createBrowserRouter([
        {
         path:"/restaurant/:resId",
         element:<Menu_Body />
+       }
+
+,
+       {
+          path:"/cart",
+          element:<Cart />
        }
   
       ]

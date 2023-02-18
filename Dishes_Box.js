@@ -3,9 +3,10 @@ import heart1 from "./Images/Heart-3.png"
 import heart2 from "./Images/RedHeart-1.png";
 import React from "react";
 
+
 function Dishes_box({ name, cloudinaryImageId, price, description,fav,fn,key}) {
-
-
+  // { name, cloudinaryImageId, price, description,fav,fn,key
+  // let resId=useParams();
   // let[love,setlove]=React.useState(heart1);
 
   // function Changelove(){
@@ -17,6 +18,14 @@ function Dishes_box({ name, cloudinaryImageId, price, description,fav,fn,key}) {
   //       setlove(heart1);
   //     }
   // }
+
+
+    // function Additem(item){
+
+
+    //   dispatch(additem(item))
+    // }
+
 
 
   return (
@@ -53,21 +62,21 @@ function Dishes_box({ name, cloudinaryImageId, price, description,fav,fn,key}) {
           />
         </div>
         <div className="add_dish_cont flex border-[1.2px] border-black w-24 bg-green-50 ml-8 -mt-4">
-          <div className="minus-sign ml-2">
+          {/* <div className="minus-sign ml-2">
             <span>-</span>
-          </div>
+          </div> */}
           <div className="add-item ml-4">
-            <span>Add</span>
+            <button>Add</button>
           </div>
-          <div className="plus-sign ml-5 -mt-[0.8px]">
+          {/* <div className="plus-sign ml-5 -mt-[0.8px]">
             <span>+</span>
-          </div>
+          </div> */}
 
 
       </div>
                 
 <div className="-ml-[420px]">
-        {/* <button onClick={}><img src={fav} className="h-3 w-3 -mb-10"/></button> */}
+        <button><img src={fav} className="h-3 w-3 -mb-10"/></button>
         </div>
         </div>
     </div>

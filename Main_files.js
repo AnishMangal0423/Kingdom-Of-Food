@@ -109,8 +109,10 @@ console.log("ani")
 
      function lowTohigh(){
           console.log("hii")
-        setfilterobj(filterobj.sort((obj1,obj2)=>(obj1?.data?.
-         costForTwo)/100 - (obj2?.data?.costForTwo)/100))
+          console.log(filterobj)
+        {setfilterobj(filterobj.sort((obj1,obj2)=>(obj1?.data?.
+         costForTwo)/100 - (obj2?.data?.costForTwo)/100))}
+         console.log(filterobj)
      }
 
 
@@ -159,7 +161,7 @@ console.log("ani")
     <button onClick={relevance_res}><li className="ml-4 mb-3 ">Relevance</li></button>
     <li className="ml-4">Delevery Time</li>
     <li className="ml-4">Rating</li>
-    <button onClick={lowTohigh}><li className="ml-4">Cost: Low to High</li></button>
+    <button onClick={(e)=>lowTohigh()}><li className="ml-4">Cost: Low to High</li></button>
    <li className="ml-4">Cost: High to low</li>
 </ul>
 </div>

@@ -6,15 +6,25 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import user from "./Images/user-2.png";
 import king from "./Images/king.jpg"
-// import Main_files from "./Main_files.js";
-// import user from "./Images/user.png";
+
 import Person from "./Usercontext.js";
 import { useContext } from "react"
+import Store from "./Store";
+import CartSlice from "./CartSlice";
+
+import { useSelector } from "react-redux";
 
 function Navbar() {
 
   let[log,setlog]=useState("Login")
   let {user1}=useContext(Person);
+   
+  let cartitem=useSelector(Store =>Store?.cart?.items);  
+  // console.log(cartitem);
+
+
+
+
 
   function changelogin(){
 
@@ -48,16 +58,16 @@ function Navbar() {
    <ul className="btn-list flex mt-9 ml-60">
 
     <li ><a href="/">Home</a></li>
-   <Link to="/about" className="ml-5"><li>About</li></Link>
-   <Link to="/ContactUs" className="ml-5"><li> Contact Us</li></Link>
+   <Link to="/about" className="ml-8"><li>About</li></Link>
+   <Link to="/ContactUs" className="ml-8"><li> Contact</li></Link>
 
-   
-   <li className="ml-20" ><button onClick={changelogin}>{log}</button></li>
-            
+   <Link to="/cart" ><li className="ml-8">Cart{cartitem?.length}</li> </Link>
+   <li className="ml-28" ><button onClick={changelogin}>{log}</button></li>
+          
       
-   <li className="ml-1 "><img src={user} className="h-6 w-6"></img></li>
+   <li className="ml-2"><img src={user} className="h-6 w-6"></img></li>
    
-   <li className="ml-2 font-mono">Welcome {(user1?.name)}</li>
+
    
    </ul>
 

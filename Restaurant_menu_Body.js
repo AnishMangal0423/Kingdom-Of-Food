@@ -8,6 +8,9 @@ import {Shimar_Menu} from "./Shimar";
 import heart1 from "./Images/Heart-3.png";
 import RedHeart from "./Images/RedHeart-1.png"
 import No_dishes from "./No_dishes.js";
+import { additem } from "./CartSlice";
+import { useDispatch } from "react-redux";
+
 
 function Menu_Body(){
 
@@ -18,9 +21,20 @@ function Menu_Body(){
     let[searchingtext,setsearchingtext]=useState("")
     let {resId,name}=useParams();
     // console.log(resId)
+    let dispatch=useDispatch();
 
 
     let[love,setlove]=useState();
+
+
+   
+
+
+    function Additem(item){
+
+      dispatch(additem(item))
+    }
+
 
     useEffect(()=>{
 
@@ -75,6 +89,11 @@ function Menu_Body(){
         setdishes(newarray);
       }
 
+
+     
+
+
+
     return dishes==null ?<Shimar_Menu /> :
     (
         <>
@@ -108,15 +127,15 @@ function Menu_Body(){
      
 
  
-
+    {/* <bitton className="bg-green-50   cursor-pointer " onClick={()=>handleclick()}>Add</bitton> */}
        <div className="dishes-list flex-col border-r-[1.2px]  border-black w-[650px]">
     
        <h1 className="ml-6 font-bold mt">{dishes.length} dishes For u....</h1>
       {
        dishes.length==0 ? <No_dishes /> :dishes.map((box1,index)=>{
 
-         console.log(box1)
-        return <Dishes_box {...box1} fav={love} fn={lovefn} key={index}/>
+         {/* console.log(box1) */}
+        return <button  onClick={()=>Additem(box1)}><Dishes_box {...box1} fav={love} fn={lovefn} key={index} /></button>
       })}
 
       </div>
