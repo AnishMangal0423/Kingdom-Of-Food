@@ -1,7 +1,21 @@
-
+import { useDispatch, useSelector } from "react-redux";
+import { removeitem } from "./CartSlice";
+import Store from "./Store";
 
 
 function Cartcard({name,id,cloudinaryImageId,price ,description}){
+
+
+  let cartitems=useSelector(store=>store?.cart?.items)
+
+  let dispatch=useDispatch();
+
+     function Remove(ele){
+
+      dispatch(removeitem(ele))
+     }
+
+
 
     return(
 
@@ -14,7 +28,7 @@ function Cartcard({name,id,cloudinaryImageId,price ,description}){
      </div> */}
 
 
-     <div className="contact-card border-2 border-yellow-500  w-48  drop-shadow-xl hover:drop-shadow-2xl rounded-lg bg-yellow-50">
+     <div className="contact-card border-2 ml-10 border-yellow-500  w-48  drop-shadow-xl hover:drop-shadow-2xl rounded-lg bg-yellow-50 " >
 
    
 <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+cloudinaryImageId}  className="ml-4 mt-2 h-22 w-36"/>
@@ -48,6 +62,17 @@ function Cartcard({name,id,cloudinaryImageId,price ,description}){
  
   <h4>{description}</h4>
   </div> */}
+
+
+     <div className="bg-red-400 w-20 px-2 rounded-sm ml-8 -mb-[10px] " onClick={(e)=>Remove()}>
+
+      <button>Remove</button>
+     </div>
+
+
+
+
+
 </div>
 
 </div>

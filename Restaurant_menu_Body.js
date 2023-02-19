@@ -96,12 +96,13 @@ function Menu_Body(){
 
     return dishes==null ?<Shimar_Menu /> :
     (
-        <>
+        <div className="relative">
+        <div className="sticky top-0 left-0 right-0">
       <Menu />
-    
+      </div>
 
       {/* now mapping our dishes array in the body */}
-      <div className="search-dishes border-2 border-black w-[244px] hover:bg-pink-50 ml-80 -mt-3">
+      <div className="search-dishes border-2 border-black w-[244px] hover:bg-pink-50 ml-80 -mt-3 mt-[10px]">
         <input
           type="text"
           placeholder="Search Dishes..."
@@ -135,23 +136,23 @@ function Menu_Body(){
        dishes.length==0 ? <No_dishes /> :dishes.map((box1,index)=>{
 
          {/* console.log(box1) */}
-        return <button  onClick={()=>Additem(box1)}><Dishes_box {...box1} fav={love} fn={lovefn} key={index} /></button>
+        return <Dishes_box {...box1} key={index} />
       })}
 
       </div>
-
+      {/* <button  onClick={()=>Additem(box1)} */}
 
 
      </div>
 
      <div className="Box1-cont">
 
-<h1 className="ml-40 font-bold">Cart-Section</h1>
+<h1 className="ml-40 font-bold">Offers</h1>
 </div>
 
    </div>
 
-        </>
+        </div>
     )
 
 }

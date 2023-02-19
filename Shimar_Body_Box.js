@@ -7,11 +7,11 @@ function Shimar_Body_Box(){
 
    <h1 className=""></h1>
 
-<div className="Shimar_Menu_body_container">
+<div className="Shimar_Menu_body_container flex">
 
      
   
-    <div className="flex flex-col  h-[400px] w-[700px]">
+    <div className="flex flex-col  w-[700px]">
  
    {
      Array(40).fill("").map((ele)=>{
@@ -21,6 +21,9 @@ function Shimar_Body_Box(){
    })}
 
    </div>
+
+
+   <div><h1 className="font-bold ml-40 mt-4">Offers</h1></div>
 
 
 

@@ -15,13 +15,15 @@ import { useState } from "react";
 import { Provider } from "react-redux";
 import Store from "./Store.js";
 import Cart from "./Cart.js";
-
+import Payment from "./Payment.js";
+import LoginForm from "./LoginForm.js";
+import Verified from "./Verified.js"
 function Appify(){
 
 
-  let[candidate,setcandidate]=useState({
+  let[user,setuser]=useState({
 
-    name:"Ani 💚",
+    name:"",
     Email:"anishm0423@gmail.com",
   })
 
@@ -33,12 +35,12 @@ function Appify(){
 
      value={{
 
-         user1:candidate,
-        //  setcandidate:""
+         user:user,
+         setuser:setuser,
 
      }}
 >
-     <Navbar />
+       <Navbar />
      
      <Outlet />
      <Footer />
@@ -87,6 +89,27 @@ let routes= createBrowserRouter([
           element:<Cart />
        }
   
+,
+      {
+           path:"/payment",
+           element:<Payment />        
+      },
+
+
+     {
+          path:"/login",
+          element:<LoginForm />
+
+     },
+
+    {
+
+      path:"/varified",
+      element:<Verified />
+    }
+
+
+
       ]
     }
   ])

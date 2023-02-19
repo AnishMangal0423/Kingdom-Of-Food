@@ -3,7 +3,7 @@ import {createContext} from "react";
 let Person=createContext({
 
 
-   user1:{
+   user:{
 
      name:"Dummy Name",
      Email:"xyz@gmail.com",
