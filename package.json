@@ -1,0 +1,31 @@
+{
+  "name": "namaste_reactjs",
+  "version": "1.0.0",
+  "description": "Year is 2023",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel Khana_pina/Index.html",
+    "build": "parcel build Index.html"
+  },
+  "author": "Anish Mangal",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "parcel": "^2.8.2",
+    "postcss": "^8.4.21",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.2",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "formik": "^2.2.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.7.0"
+  },
+  "browserslist": [
+    "Last 10 Chrome version"
+  ]
+}
