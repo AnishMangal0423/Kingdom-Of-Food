@@ -16,7 +16,7 @@ export function Shimar(){
         <h1 className="font-bold text-2xl  animate-bounce "> Wait,Wait !! Wait , Anish Is Searching Restaurants For u .............</h1>
 
 
-
+ 
         <div className="h-[200px] bg-black mt-2">
         <div className="flex gap-10 ml-[80px] mr-10 ">
         
@@ -29,7 +29,7 @@ export function Shimar(){
       </div>
 
 
-      </div>
+      </div> 
     
 
 
@@ -44,7 +44,7 @@ export function Shimar(){
     </div> */}
 
 
-        <div className="shimar-cont flex flex-wrap mt-10 ml-10">
+        <div className="shimar-cont flex flex-wrap mt-[300px] ml-10">
 
 
       
@@ -81,3 +81,31 @@ export function Shimar_Menu(){
 }
 
               
+
+
+
+
+export function Shimar_crousal(){
+
+
+    return(
+<>
+    {/* //  <h1 className="font-bold text-2xl  animate-bounce "> Wait,Wait !! Wait , Anish Is Searching Restaurants For u .............</h1> */}
+   <div className="h-[200px] bg-black">
+<div className="flex gap-10 mb-1 mr-[50px] ">
+
+ {Array(5).fill("").map((item,index)=>{
+
+
+    return <Blank_Crousals />
+ })}
+
+</div>
+
+
+</div>
+
+</>
+
+    )
+}

@@ -16,6 +16,9 @@ import { useLocation } from "react-router-dom";
 import Crousal_Card from "./Crousal_card.js";
 import left from "./Images/left1.png";
 import right from "./Images/right.png";
+import {Shimar_crousal} from "./Shimar.js"
+
+
 
 function Main_files(props) {
   /**
@@ -144,7 +147,7 @@ function Main_files(props) {
         <div className="flex gap-10 ml-[80px] mr-10 ">
           {/* <div><img src={left} className="h-4 w-4 mt-20 "/></div> */}
 
-          {crousalList.map((items, index) => {
+          {crousalList.length==0 ? (<Shimar_crousal />) : crousalList.map((items, index) => {
             return <Crousal_Card {...items?.data} key={index} />;
           })}
 
@@ -176,32 +179,35 @@ function Main_files(props) {
 
       <div>{Person?.user1?.name}</div>
 
+
+
+
       <div className="flex flex-col ml-16  ">
         <div className="flex -mb-4 border-b-2 border-gray-200 ">
           <h1 className="text-xl ml-16 -mb-6 font-bold">
             {filterobj.length} Restaurants
           </h1>
-          <ul className="flex ml-56 mt-1 text-gray-700 ">
+          <ul className="flex ml-56 mt-2 text-gray-700 ">
           
 
             <button>
 
-              <li classname="ml-4">Relevance</li>
+              <li classname="ml-4 hover:border-b-[1.1px] hover:border-orange-100">Relevance</li>
             </button>
 
             <button>
-            <li className="ml-4">Delevery Time</li></button>
+            <li className="ml-4 hover:border-b-[1.5px] hover:border-orange-900">Delevery Time</li></button>
 
             <button>
-            <li className="ml-4">Rating</li></button>
+            <li className="ml-4 hover:border-b-2 hover:border-black">Rating</li></button>
 
 
             <button onClick={(e) => lowTohigh()}>
-              <li className="ml-4">Cost: Low to High</li>
+              <li className="ml-4 hover:border-b-2 hover:border-black">Cost: Low to High</li>
             </button>
 
             <button>
-            <li className="ml-4">Cost: High to low</li>
+            <li className="ml-4 hover:border-b-2 hover:border-black">Cost: High to low</li>
 
             </button>
           </ul>

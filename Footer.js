@@ -49,8 +49,8 @@ useEffect(()=>{
     <div className="tracking-wider ml-[400px]">Made By Anish With ❤️</div>
     </div>
 
-  <div className="h-10"></div>
- 
+  <div className="h-10 "></div>
+  <h1 className="ml-[500px]">{new Date().toLocaleTimeString()}</h1>
 </div>
 
       
