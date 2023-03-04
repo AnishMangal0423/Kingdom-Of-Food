@@ -28,7 +28,7 @@ function Cartcard({name,id,cloudinaryImageId,price ,description}){
      </div> */}
 
 
-     <div className="contact-card border-2 ml-10 border-yellow-500  w-48  drop-shadow-xl hover:drop-shadow-2xl rounded-lg bg-yellow-50 " >
+     <div className="contact-card border-2 ml-10 border-yellow-500  w-48  drop-shadow-3xl hover:drop-shadow-2xl rounded-lg bg-yellow-50  " >
 
    
 <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+cloudinaryImageId}  className="ml-4 mt-2 h-22 w-36"/>

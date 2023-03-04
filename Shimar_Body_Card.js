@@ -19,7 +19,7 @@ return(
 
 
 
-   <div className="h-[130px] w-[130px] bg-gray-200 mt-6 animate-pulse ml-16">
+   <div className="h-[130px] w-[130px] bg-gray-200 mt-6 animate-pulse  ml-16">
       
    </div>
 
