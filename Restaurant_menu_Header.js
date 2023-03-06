@@ -5,7 +5,7 @@ import { Shimar, Shimar_Menu } from "./Shimar";
 import  star from "./Images/star.png";
 
 
-function Menu() {
+function Menu(){
 
 
   const { resId, name } = useParams();
