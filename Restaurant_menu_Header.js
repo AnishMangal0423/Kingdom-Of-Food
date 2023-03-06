@@ -9,7 +9,7 @@ function Menu() {
 
 
   const { resId, name } = useParams();
-  // console.log(useParams());
+  // console.log(useParams())
 
   // now we have to store our restaturant for extarcting the details of that restaurant like name,tags and many more--
 
