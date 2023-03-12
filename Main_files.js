@@ -41,7 +41,7 @@ function Main_files(props) {
 
   let [crousalList, setcrousallist] = useState([]);
 
-  function check(tosearch) {
+  function check(tosearch){
     // setnewData(newData);
     return newData.filter((member) => {
       return member?.data?.name?.toLowerCase().includes(tosearch.toLowerCase());
