@@ -1,6 +1,6 @@
 
 
-import Emptycart from "./Images/EmptyCart.jpg"
+import Emptycart from "./Images/emptyCart.jpg"
 function EmptyCart(){
 
     return(
